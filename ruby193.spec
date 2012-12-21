@@ -1,5 +1,5 @@
 %define rubyver         1.9.3
-%define rubyminorver    p286
+%define rubyminorver    p327
 
 Name:           ruby
 Version:        %{rubyver}%{rubyminorver}
@@ -64,6 +64,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}
 
 %changelog
+* Thu Nov 15 2012 Rajat Vig <rajat.vig@gmail.com> - 1.9.3-p327
+- Update ruby version to 1.9.3-p327
 * Mon Oct 22 2012 Carlos Villela <cv@lixo.org> - 1.9.3-p286
 - Update ruby version to 1.9.3-p286
 * Wed Jul 4 2012 Carlos Villela <cv@lixo.org> - 1.9.3-p194
