@@ -64,18 +64,24 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}
 
 %changelog
-* Tue Jan 15 2012 Carlos Villela <cv@lixo.org> - 1.9.3-p362
+* Tue Jan 15 2013 Carlos Villela <cv@lixo.org> - 1.9.3-p362
 - Update ruby version to 1.9.3-p362
+
 * Thu Nov 15 2012 Rajat Vig <rajat.vig@gmail.com> - 1.9.3-p327
 - Update ruby version to 1.9.3-p327
+
 * Mon Oct 22 2012 Carlos Villela <cv@lixo.org> - 1.9.3-p286
 - Update ruby version to 1.9.3-p286
+
 * Wed Jul 4 2012 Carlos Villela <cv@lixo.org> - 1.9.3-p194
 - Update ruby version to 1.9.3-p194
+
 * Wed Jan 18 2012 Mandi Walls <mandi.walls@gmail.com> - 1.9.3-p0
 - Update ruby version to 1.9.3-p0
+
 * Mon Aug 29 2011 Gregory Graf <graf.gregory@gmail.com> - 1.9.2-p290
 - Update ruby version to 1.9.2-p290
+
 * Sat Jun 25 2011 Ian Meyer <ianmmeyer@gmail.com> - 1.9.2-p180-2
 - Remove non-existant --sitearchdir and --vedorarchdir from %configure
 - Replace --sitedir --vendordir with simpler --libdir
