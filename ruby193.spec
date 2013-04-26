@@ -1,7 +1,7 @@
 %define rubyver         1.9.3
 %define rubyminorver    p392
 
-Name:           ruby
+Name:           ruby1.9
 Version:        %{rubyver}%{rubyminorver}
 Release:        2%{?dist}
 License:        Ruby License/GPL - see COPYING
@@ -12,17 +12,6 @@ Source0:        ftp://ftp.ruby-lang.org/pub/ruby/ruby-%{rubyver}-%{rubyminorver}
 Summary:        An interpreter of object-oriented scripting language
 Group:          Development/Languages
 Provides: ruby(abi) = 1.9
-Provides: ruby-irb
-Provides: ruby-rdoc
-Provides: ruby-libs
-Provides: ruby-devel
-Provides: rubygems
-Obsoletes: ruby
-Obsoletes: ruby-libs
-Obsoletes: ruby-irb
-Obsoletes: ruby-rdoc
-Obsoletes: ruby-devel
-Obsoletes: rubygems
 
 %description
 Ruby is the interpreted scripting language for quick and easy
@@ -42,11 +31,14 @@ export CFLAGS="$RPM_OPT_FLAGS -Wall -fno-strict-aliasing"
   --without-X11 \
   --without-tk \
   --includedir=%{_includedir}/ruby \
-  --libdir=%{_libdir}
+  --libdir=%{_libdir} \
+  --with-soname=ruby-1.9 \
+  --program-suffix=1.9
 
 make %{?_smp_mflags}
 
 %install
+rm -rf $RPM_BUILD_ROOT
 # installing binaries ...
 make install DESTDIR=$RPM_BUILD_ROOT
 
@@ -64,6 +56,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}
 
 %changelog
+* Fri Apr 26 2013 Kenji Okimoto <okimoto@clear-code.com> -1.9.3-p392
+- Co-exist multiple ruby versions.
+
 * Sun Feb 24 2013 Masahito Yoshida <masahito@axsh.net> - 1.9.3-p392
 - Update ruby version to 1.9.3-p392
 
