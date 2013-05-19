@@ -1,5 +1,5 @@
 %define rubyver         1.9.3
-%define rubyminorver    p392
+%define rubyminorver    p429
 
 Name:           ruby
 Version:        %{rubyver}%{rubyminorver}
@@ -64,6 +64,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}
 
 %changelog
+* Sun May 19 2013 Masahito Yoshida <masahito@axsh.net> - 1.9.3-p429
+- Update ruby version to 1.9.3-p429
+
 * Sun Feb 24 2013 Masahito Yoshida <masahito@axsh.net> - 1.9.3-p392
 - Update ruby version to 1.9.3-p392
 
