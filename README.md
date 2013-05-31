@@ -6,7 +6,11 @@ This spec is an attempt to push for a stable replacement of Ruby 1.8.x with 1.9.
 
 ### How to install
 
-#### RHEL/CentOS 5/6
+#### CentOS 6.4
+
+Take a look at the provisioning script in the Vagrantfile.
+
+#### RHEL 5/6 and CentOS 5
 
     yum install -y rpm-build rpmdevtools
     rpmdev-setuptree
@@ -57,6 +61,7 @@ Tested upstream working on:
 * RHEL 6.1 x86_64
 * RHEL 6.1 i686
 * CentOS 5.6 x86_64
+* CentOS 6.4 x86_64
 
 * I (lnxchk) have some pre-built rpms for aws amis as of 2011.09 release at http://treble.rwe40.net:8088/amzn
 
